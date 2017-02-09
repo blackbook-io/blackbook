@@ -1,0 +1,25 @@
+<div class="login-content">
+	<!-- Login -->
+	<div class="lc-block toggled" id="l-login">
+		<div class="lcb-form">
+			<div>
+				<%= link_to(image_tag('core/login.png'), root_path) -%>
+			</div>
+			<h4 class="text-left m-b-20">Sign In</h4>
+			<%= form_for(Account.new, url: users_accounts_lookup_path, html: { method: :post }) do |f| %>
+
+			<div class="input-group form-group">
+				<div class="fg-line">
+					<label class="control-label">Enter account subdomain</label>
+					<input type="text" class="form-control input-lg" required placeholder="e.g. acme" id="user_email" name="user[email]" >
+				</div>
+				<span class="input-group-addon last text c-amber">.hanumi.io</span>
+			</div>
+
+			<%= f.button 'Sign In', class: 'btn btn-primary btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
+      <% end %>
+      <div class="f-16 m-b-20">Don't have an account? <%= link_to "Sign up", sign_up_path %> now!</div>
+			<%= render partial: 'core/legal_information' %>
+
+	</div>
+</div>

@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+<h2>Change your password</h2>
+=======
+<p class="p-t-35">Change your password</p>
+>>>>>>> feature/account_setup
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+<<<<<<< HEAD
+  <div class="field">
+    <%= f.label :password, "New password" %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Change my password" %>
+=======
+  <!-- START Form Control-->
+  <div class="form-group form-group-default">
+    <%= f.label :email %>
+    <div class="controls">
+      <%= f.email_field :email, autofocus: true, placeholder: "e.g. mary@domain.com", class: "form-control", required: true %>
+    </div>
+  </div>
+  <!-- END Form Control-->
+
+  <!-- START Form Control-->
+  <div class="form-group form-group-default">
+    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <div class="controls">
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
+    </div>
+  </div>
+  <!-- END Form Control-->
+
+  <div class="actions">
+    <%= f.submit "Change Password",  class: "btn btn-primary btn-cons m-t-10" %>
+>>>>>>> feature/account_setup
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= ENV['GIZMO_SITE_TITLE'] %></title>
+        <%= csrf_meta_tags %>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+
+        <%= render partial: 'admins/core/header' %>
+        <section id="main">
+            <%= render partial: 'admins/core/navigator' %>
+
+            <section id="content">
+                <%= yield %>
+            </section>
+        </section>
+
+        <%= render partial: 'admins/core/footer' %>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-blue">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20"/>
+                </svg>
+
+                <p>Please wait...</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,130 @@
+<div class="content bg-white">
+
+    <div class="jumbotron lg vertical center bg-warning column-w4 vertical-bottom no-margin" data-pages="parallax">
+        <div class="market-hero">
+            <div class="container-fluid container container-fixed-lg sm-p-l-20 sm-p-r-20 full-height">
+                <div class="inner full-height" style="transform: translateY(0px); opacity: 1;">
+                    <div class="container-xs-height full-height">
+                        <div class="col-xs-height col-middle  ">
+                            <p class="font-montserrat bold hint-text">GETTING STARTED</p>
+                            <div class="m-b-50">
+                                <h2 class="text-black inline">HANUMI makes it easier<br>to manage business and technical<br> requirements for projects of all sizes.</h2>
+                                <h5 class="hint-text">Exclusive with only with Pages UI framework
+                                </h5>
+                            </div>
+                            <div class="m-t-20 m-b-40 ">
+                              <%= link_to 'Get Started', get_started_ack_owner_path, method: :post, class: "btn btn-success btn-lg" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-fixed-lg m-t-20">
+
+        <div class="panel panel-transparent">
+            <div class="panel-heading">
+                <div class="panel-title">Helpful Tips
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Indeterminate progress</h5>
+                        <p>This is mostly used for its repetitive circular shape for tasks which the time cannot be measured. With the use of SVG the size can be scaled to any preferred amount by the user without any quality loss. We developed a custom animation with
+                            different timescales for a better user experience.
+                        </p>
+                        <br>
+                        <h5>Determinate progress</h5>
+                        <p>Similar to the determinate progress bar, circular progress can also be used to show the length of a task. The determinate circular progress indicator can be initialised without writing a single line of Javascript code.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Color options</h5>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <input class="progress-circle" data-pages-progress="circle" value="75" type="hidden" data-color="complete">
+                                <div class="progress-circle progress-circle-complete">
+                                    <div class="pie" style="clip: rect(auto auto auto auto);">
+                                        <div class="left-side half-circle" style="transform: rotate(270deg);"></div>
+                                        <div class="right-side half-circle" style="transform: rotate(180deg);"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <p>Complete Progress bar color</p>
+                                <p class="small hint-text">
+                                    Set data attribute
+                                    <code>data-color</code>
+                                    to "complete"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <input class="progress-circle" data-pages-progress="circle" value="75" type="hidden" data-color="primary">
+                                <div class="progress-circle progress-circle-primary">
+                                    <div class="pie" style="clip: rect(auto auto auto auto);">
+                                        <div class="left-side half-circle" style="transform: rotate(270deg);"></div>
+                                        <div class="right-side half-circle" style="transform: rotate(180deg);"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <p>Complete Progress bar color</p>
+                                <p class="small hint-text">
+                                    Set data attribute
+                                    <code>data-color</code>
+                                    to "primary"
+                                </p>
+                            </div>
+                        </div>
+                        <p class="small hint-text">All the colours included in pages color pallete is applicable</p>
+                        <br>
+                        <button class="btn btn-success">See color palette</button>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Circular progress sizes</h5>
+                        <p>In circular progress you can change the stroke width</p>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <input class="progress-circle" data-pages-progress="circle" value="75" type="hidden">
+                                <div class="progress-circle">
+                                    <div class="pie" style="clip: rect(auto auto auto auto);">
+                                        <div class="left-side half-circle" style="transform: rotate(270deg);"></div>
+                                        <div class="right-side half-circle" style="transform: rotate(180deg);"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="small hint-text">Default progress with a stroke of 3px</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <input class="progress-circle" data-pages-progress="circle" value="75" type="hidden" data-thick="true">
+                                <div class="progress-circle progress-circle-thick">
+                                    <div class="pie" style="clip: rect(auto auto auto auto);">
+                                        <div class="left-side half-circle" style="transform: rotate(270deg);"></div>
+                                        <div class="right-side half-circle" style="transform: rotate(180deg);"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="small hint-text">Progress with a stroke of 3px</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  adapter: mysql2
+  url: <%= ENV['DATABASE_URL'] %>
+
+  development:
+    adapter: mysql2
+    url: <%= ENV['DATABASE_URL'] %>
