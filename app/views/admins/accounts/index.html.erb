@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="block-header hidden-xs">
+        <h2>Accounts</h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="" data-toggle="dropdown">
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+
+            <div class="card">
+                <div class="card-header ch-alt m-b-20">
+                    <h2>Some Title
+                        <small>Phasellus condimentum ipsum id auctor</small>
+                    </h2>
+                    <ul class="actions">
+                        <li>
+                            <a href="">
+                                <i class="zmdi zmdi-refresh-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="zmdi zmdi-download"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="">Change Date Range</a>
+                                </li>
+                                <li>
+                                    <a href="">Change Graph Type</a>
+                                </li>
+                                <li>
+                                    <a href="">Other Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button class="btn bgm-red btn-float waves-effect">
+                        <i class="zmdi zmdi-plus"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Subdomain</th>
+                                <th class="text-right">Users</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @accounts.each do |account| %>
+                            <tr>
+                                <td>
+                                    <%= account.account_name %>
+                                </td>
+                                <td>
+                                    <%= account.subdomain %>
+                                </td>
+                                <td class="text-right">
+                                    <%= account.users.count %>
+                                </td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+
+                    <a class="view-more" href="">View All</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card animation-demo">
+                <div class="card-header">
+                    <h2>Bouncing Entrances
+                        <small>Click on the buttons below to start the animation</small>
+                    </h2>
+                </div>
+
+                <div class="card-body card-padding">
+                    <%= image_tag "onboard/mobile.png", class: 'animated', style: 'padding: 0 20px !important; text-align: center !important' %>
+
+                    <div class="row animation-demo">
+                        <div class="col-xs-6">
+                            <button class="btn bgm-cyan waves-effect">bounceIn</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn bgm-cyan waves-effect">bounceInDown</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn bgm-cyan waves-effect">bounceInLeft</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn bgm-cyan waves-effect">bounceInRight</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn bgm-cyan waves-effect">bounceInUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

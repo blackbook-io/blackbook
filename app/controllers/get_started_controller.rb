@@ -14,14 +14,14 @@ class GetStartedController < TenantedController
   # page as an owner of an account.
   def ack_owner
     current_user.update_attribute :ack_get_started_owner, true
-    redirect_to root_path
+    redirect_to dashboard_path
   end # def ack_owner
 
   # Performs the acknlowledgement of the getting started landing
   # page as an user of an account.
   def ack_user
     current_user.update_attribute :ack_get_started_user, true
-    redirect_to root_path
+    redirect_to dashboard_path
   end # def ack_user
 
 end # class GetStartedController

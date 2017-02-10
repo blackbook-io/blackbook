@@ -1,34 +1,27 @@
 <style>
     .s-profile > a {
-      background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-        background-image: url(<%= image_url("bkgds/work.jpg") %>) left top no-repeat;
-
+        background-image: url("<%= image_path("bkgds/mb-bg-fb-24.png") %>");
     }
 
 </style>
 
 <aside id="sidebar" class="sidebar c-overflow">
     <div class="s-profile">
-        <a href="" data-ma-action="profile-menu-toggle">
+        <a href="" style="cursor: default;">
             <div class="sp-pic">
-                <%= image_tag "bkgds/work.jpg" %>
+                <%= image_tag "demo/profile-pics/1.jpg" %>
             </div>
 
             <div class="sp-info">
                 <%= current_admin.full_name %>
 
-                <i class="zmdi zmdi-caret-down"></i>
+                <!-- <i class="zmdi zmdi-caret-down"></i> -->
             </div>
         </a>
 
-        <ul class="main-menu">
+        <ul class="main-menu" style="display: block">
             <li>
-                <a href="profile-about.html">
-                    <i class="zmdi zmdi-account"></i>
-                    Profile</a>
+                <%= link_to '<i class="zmdi zmdi-account"></i> Profile'.html_safe, edit_admins_administrator_path(current_admin) %>
             </li>
             <li>
                 <%= link_to '<i class="zmdi zmdi-time-restore"></i> Sign Out'.html_safe, destroy_admin_session_path, method: :delete %>
@@ -37,88 +30,36 @@
     </div>
 
     <ul class="main-menu">
+
         <li>
-            <a href="#">
-                <i class="zmdi zmdi-chart"></i>
-                Dashboard</a>
+            <%= link_to('<i class="zmdi zmdi-chart"></i> Dashboard'.html_safe, admins_dashboard_path) %>
         </li>
-        <li class="sub-menu">
+
+        <li class="sub-menu toggled">
             <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-assignment-check"></i>
+                <i class="zmdi zmdi-lock-open"></i>
                 Access</a>
 
-            <ul>
+            <ul style="display: block">
                 <li>
-                    <a href="#">Accounts</a>
+                    <%= link_to 'Accounts', admins_accounts_path %>
                 </li>
                 <li>
-                    <a href="#">Users</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-attachment-alt"></i>
-                Services</a>
-
-            <ul>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Plus Executives</a>
-                </li>
-                <li>
-                    <a href="#">Corporate Linkage</a>
-                </li>
-                <li>
-                    <a href="#">Minority Linkage</a>
+                    <%= link_to 'Administrators', admins_administrators_path %>
                 </li>
             </ul>
         </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-search"></i>
-                Reporting</a>
 
-            <ul>
-                <li>
-                    <a href="#">Typeahead</a>
-                </li>
-                <li>
-                    <a href="#">Criteria</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
+        <li class="sub-menu toggled">
             <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-search"></i>
-                Reporting</a>
+                <i class="zmdi zmdi-settings"></i>
+                Configuration</a>
 
-            <ul>
+            <ul style="display: block">
                 <li>
-                    <a href="#">Typeahead</a>
+                    <%= link_to 'Sales Collateral', "" %>
                 </li>
-                <li>
-                    <a href="#">Criteria</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-portable-wifi"></i>
-                Monitoring</a>
 
-            <ul>
-                <li>
-                    <a href="#">Registration</a>
-                </li>
-                <li>
-                    <a href="#">Seed File</a>
-                </li>
-                <li>
-                    <a href="#">Notifications</a>
-                </li>
             </ul>
         </li>
 

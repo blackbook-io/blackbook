@@ -13223,7 +13223,7 @@ html.ismobile .page-loader {
   top: 0;
   z-index: 9;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
 }
 /*----------------------------------
     Avatar

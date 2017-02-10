@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
-    root to: 'dashboard#index'
+    #root to: 'dashboard#index'
+
+    get '/', to: 'director#index'
 
     # Getting Started
     get 'get_started', to: 'get_started#user'
     get 'getting_started', to: 'get_started#owner'
     post 'get_started/ack_owner', to: 'get_started#ack_owner'
     post 'get_started/ack_user', to: 'get_started#ack_user'
+
+    # dashboard
+    get 'dashboard', to: 'dashboard#index'
 
 
     devise_for :admins, controllers: {
@@ -27,6 +32,9 @@ Rails.application.routes.draw do
     namespace :admins do
 
       get 'dashboard', to: 'dashboard#index'
+
+      resources :accounts
+      resources :administrators
 
     end
 

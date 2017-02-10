@@ -15,6 +15,9 @@
 
 **/node_modules
 
+!.env.*
+.env.sample
+
 # Ignore Byebug command history file.
 .byebug_history
 

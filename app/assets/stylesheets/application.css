@@ -18,6 +18,7 @@
  *
  *= require dist/css/app_1.min
  *= require dist/css/app_2.min
+ *= require dist/css/demo
  *
  *= require_self
  */

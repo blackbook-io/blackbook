@@ -1,4 +1,307 @@
-<!-- START PAGE CONTENT -->
-<div class="content sm-gutter">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Visits by Server Time
+                        <small>Lorem ipsum dolor sit amet consectetur adipiscing elit</small>
+                    </h1>
+                </div>
+                <div class="card-body card-padding">
+                    <div id="visit-server-time" class="flot-chart" style="padding: 0px; position: relative;">
+                        <canvas class="flot-base" width="508" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 254px; height: 250px;"></canvas>
+                        <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                            <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 58px; text-align: center;">5h</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 103px; text-align: center;">10h</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 150px; text-align: center;">15h</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 196px; text-align: center;">20h</div>
+                            </div>
+                            <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                <div style="position: absolute; top: 220px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 11px; text-align: right;">0</div>
+                                <div style="position: absolute; top: 183px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">20</div>
+                                <div style="position: absolute; top: 147px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">40</div>
+                                <div style="position: absolute; top: 111px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">60</div>
+                                <div style="position: absolute; top: 74px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">80</div>
+                                <div style="position: absolute; top: 38px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 1px; text-align: right;">100</div>
+                                <div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 1px; text-align: right;">120</div>
+                            </div>
+                        </div>
+                        <canvas class="flot-overlay" width="508" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 254px; height: 250px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>Visitor Browser
+                        <small>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</small>
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Browser</th>
+                                <th class="text-right">Visitors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                  <%= image_tag 'browsers/icons/chrome.png' %> Google Chrome
+
+                                </td>
+                                <td class="text-right">1102
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'browsers/icons/firefox.png' %> Mozilla Firefox</td>
+                                <td class="text-right">1005
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'browsers/icons/safari.png' %> Safari</td>
+                                <td class="text-right">843
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'browsers/icons/opera.png' %>Opera</td>
+                                <td class="text-right">513
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'browsers/icons/edge.png' %>Microsoft Edge</td>
+                                <td class="text-right">462
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'browsers/icons/samsung-internet.png' %>Samsung Internet</td>
+                                <td class="text-right">405
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <a class="view-more" href="">View All</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>Site Performance
+                        <small>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</small>
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>External Backlinks</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">62,302</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Page Speed Score</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">85</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Citation Flow</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">43</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mozrank</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">8.43</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Domain Authority</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">102</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alexa Rank</td>
+                                <td class="text-right">
+                                    <h4 class="m-0">143,234</h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Server Status
+                        <small>Aenean eoquam pellentesque ornare lacinia venenatis vestibulum</small>
+                    </h1>
+                </div>
+                <div class="card-body card-padding">
+                    <div id="dynamic-chart" class="flot-chart" style="padding: 0px; position: relative;">
+                        <canvas class="flot-base" width="508" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 254px; height: 250px;"></canvas>
+                        <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                            <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 24px; text-align: center;">0</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 65px; text-align: center;">50</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 107px; text-align: center;">100</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 151px; text-align: center;">150</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 195px; text-align: center;">200</div>
+                                <div
+                                    style="position: absolute; max-width: 107px; top: 236px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 239px; text-align: center;">250</div>
+                            </div>
+                            <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                <div style="position: absolute; top: 220px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 11px; text-align: right;">0</div>
+                                <div style="position: absolute; top: 176px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">20</div>
+                                <div style="position: absolute; top: 132px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">40</div>
+                                <div style="position: absolute; top: 89px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">60</div>
+                                <div style="position: absolute; top: 45px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 6px; text-align: right;">80</div>
+                                <div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 10px; line-height: 13px; font-family: roboto; color: rgb(159, 159, 159); left: 1px; text-align: right;">100</div>
+                            </div>
+                        </div>
+                        <canvas class="flot-overlay" width="508" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 254px; height: 250px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>Referrer Websites
+                        <small>Curabitur blandit tempus porttitor mollis ullamcorper</small>
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Website</th>
+                                <th class="text-right">Visitors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bootstrapsale.com</td>
+                                <td class="text-right">120
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>wrapbootstrap.com</td>
+                                <td class="text-right">132
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>google.com</td>
+                                <td class="text-right">2102
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>yahoo.com</td>
+                                <td class="text-right">983
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>youtube.com</td>
+                                <td class="text-right">651
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>bing.com</td>
+                                <td class="text-right">4019
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <a class="view-more" href="">View All</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>Search Engine
+                        <small>Etiam porta sem malesuada magna mollis euismod</small>
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Search Engine</th>
+                                <th class="text-right">Visitors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><%= image_tag 'search-engines/google.png' %> Google</td>
+                                <td class="text-right">5831
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'search-engines/bing.png' %> Bing</td>
+                                <td class="text-right">5123
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'search-engines/baidu.png' %> Baidu</td>
+                                <td class="text-right">3175
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'search-engines/yahoo.png' %> Yahoo</td>
+                                <td class="text-right">3120
+                                    <i class="stats-arrow stats-arrow-down zmdi zmdi-long-arrow-down"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'search-engines/duckduckgo.png' %> DuckDuckGo</td>
+                                <td class="text-right">1864
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= image_tag 'search-engines/yandex.png' %> Yandex</td>
+                                <td class="text-right">836
+                                    <i class="stats-arrow stats-arrow-up zmdi zmdi-long-arrow-up"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <a class="view-more" href="">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- END PAGE CONTENT -->

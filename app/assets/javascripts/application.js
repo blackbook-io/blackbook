@@ -28,4 +28,6 @@
 //
 //= require dist/js/app.min
 //
+//= require_tree ./custom
+//
 //= require_self

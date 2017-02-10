@@ -6,19 +6,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
   $('html').addClass('ismobile');
 }
 
-$(document).on('turbolinks:load', function() {
-
-  /*----------------------------------------------------------
-      Page Loader
-   -----------------------------------------------------------*/
-  if (!$('html').hasClass('ismobile')) {
-    if ($('.page-loader')[0]) {
-      setTimeout(function() {
-        $('.page-loader').fadeOut();
-      }, 200);
-    }
-  }
-});
+// $(window).on('turbolinks:load', function() {
+//
+//   /*----------------------------------------------------------
+//       Page Loader
+//    -----------------------------------------------------------*/
+//   if (!$('html').hasClass('ismobile')) {
+//     if ($('.page-loader')[0]) {
+//       setTimeout(function() {
+//         $('.page-loader').fadeOut();
+//       }, 200);
+//     }
+//   }
+// });
 
 $(document).on('turbolinks:load', function() {
 
