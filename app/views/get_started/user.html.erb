@@ -1,179 +1,26 @@
+</style>
 <div class="container">
 
-    <div class="block-header">
-        <h2>Match</h2>
-
-        <ul class="actions">
-            <li>
-                <a href="">
-                    <i class="zmdi zmdi-trending-up"></i>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="zmdi zmdi-check-all"></i>
-                </a>
-            </li>
-            <li class="dropdown">
-                <a href="" data-toggle="dropdown">
-                    <i class="zmdi zmdi-more-vert"></i>
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-right">
-                    <li>
-                        <a href="">Refresh</a>
-                    </li>
-                    <li>
-                        <a href="">Manage Widgets</a>
-                    </li>
-                    <li>
-                        <a href="">Widgets Settings</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
-                    <h2>Enter Match Criteria
-                    </h2>
-                </div>
+              <div class="card-header">
+                <h1 class="onboard m-b-30">We have lift off!</h1>
+              </div>
+
 
                 <div class="card-body card-padding">
+                  <div style="text-align: center">
+                    <%= image_tag 'onboard/rocket.png', style: 'text-align: center; width: 260px', class: 'p-b-30' %>
+                  </div>
 
-                    <form role="form">
+                    <form role="form" class="text-center">
                         <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
                         <p>Pellentesque lacinia sagittis libero et feugiat. Etiam volutpat adipiscing tortor non luctus. Vivamus venenatis vitae metus et aliquet. Praesent vitae justo purus. In hendrerit lorem nisl, ac lacinia urna aliquet non. Quisque nisi tellus, rhoncus
                             quis est sit amet, lacinia euismod nunc. Aenean nec nibh velit. Fusce quis ante in nisl molestie fringilla. Nunc vitae ante id magna feugiat condimentum. Maecenas sit amet urna massa.</p>
 
-                        <h4 class="m-b-20">General Information (Required)<br>
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum lorem non erat accumsan faucibus. Quisque viverra massa in auctor aliquet. Praesent pretium in ipsum fermentum faucibus.
-                            </small>
-                        </h4>
+                            <%= link_to 'Get Started', get_started_ack_user_path, method: :post, class: "btn btn-success btn-lg" %>
 
-                        <div class="row m-t-20">
-                            <div class="col-md-6">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g. ACME Widgets">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">Country</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select a country">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="m-b-20">Identification (Optional)<br>
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum lorem non erat accumsan faucibus. Quisque viverra massa in auctor aliquet. Praesent pretium in ipsum fermentum faucibus.
-                            </small>
-                        </h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputEmail1">Registration ID (National ID)</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g. ACME Widgets">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">Registration Type</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select a country">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">D-U-N-S</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select a country">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="m-b-20">Contact Information (Optional)<br>
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum lorem non erat accumsan faucibus. Quisque viverra massa in auctor aliquet. Praesent pretium in ipsum fermentum faucibus.
-                            </small>
-                        </h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputEmail1">Address Line 1</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g. 101 Drury Lane">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputEmail1">City</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g. Somewehere Ville">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">Postal Code</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="e.g. 80111">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputEmail1">Address Line 2</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="e.g. Suite 500">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">State/Province</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="e.g. Colorado">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group fg-line">
-                                    <label for="exampleInputPassword1">Telephone Number</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="e.g. 3036801111">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="m-b-20">APIs (Required)<br>
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum lorem non erat accumsan faucibus. Quisque viverra massa in auctor aliquet. Praesent pretium in ipsum fermentum faucibus.
-                            </small>
-                        </h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                        Direct 1.0
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                        Direct 2.0
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                        Direct +
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary m-t-10">Submit</button>
                     </form>
                 </div>
             </div>

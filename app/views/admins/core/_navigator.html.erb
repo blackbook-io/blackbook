@@ -1,6 +1,11 @@
 <style>
     .s-profile > a {
-        background: url(<%= image_url("profile-menu.png") %>) left top no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+        background-image: url(<%= image_url("bkgds/work.jpg") %>) left top no-repeat;
+
     }
 
 </style>
@@ -9,7 +14,7 @@
     <div class="s-profile">
         <a href="" data-ma-action="profile-menu-toggle">
             <div class="sp-pic">
-                <%= image_tag "demo/profile-pics/1.jpg" %>
+                <%= image_tag "bkgds/work.jpg" %>
             </div>
 
             <div class="sp-info">

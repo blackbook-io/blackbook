@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
         <meta charset="utf-8"/>
-        <title><%= ENV['GIZMO_SITE_TITLE'] %></title>
+        <title>Blackbook | Administration</title>
         <%= csrf_meta_tags %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
         <link rel="apple-touch-icon" href="pages/ico/60.png">
@@ -20,12 +20,14 @@
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-
         <style>
             .turbolinks-progress-bar {
                 background: #6d5cae;
             }
 
+            .login-content:after {
+                background-image: url(<%= asset_url("bkgds/support.jpg") %>);
+            }
         </style>
 
     </head>
@@ -34,7 +36,15 @@
             <!-- Login -->
             <div class="lc-block toggled" id="l-login">
                 <div class="lcb-form">
+                    <div class="lcb-header" style="padding: 50px 20px 10px 20px;">
+                        <%= image_tag 'logos/login.png', width: 200 %>
+                    </div>
+
                     <%= yield %>
+
+                    <div class="lcb-footer" style="padding: 0 20px 20px 20px;">
+                        <%= image_tag 'logos/powered_by.png', width: 100 %>
+                    </div>
                 </div>
 
             </div>

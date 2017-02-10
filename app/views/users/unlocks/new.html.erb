@@ -1,19 +1,16 @@
-<div class="lcb-header bgm-primary p-20" style="height: 180px; border-radius: 2px 2px 0 0">
-</div>
 <div class="lcb-body">
 	<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
 	<%= devise_error_messages! %>
 	<div class="form-group">
 		<div class="fg-line">
 			<%= f.label "Email Address", class: "control-label email" %>
-			<%#= f.text_field :email, autofocus: true, class: "form-control input-lg", placeholder: "e.g. peter.pan@neverland.com" %>
-			<input type="email" class="form-control input-lg" required placeholder="e.g. peter.pan@neverland.com" id="user_email" name="user[email]">
+			<%= f.text_field :email, autofocus: true, class: "form-control input-lg", placeholder: "e.g. peter.pan@neverland.com" %>
 		</div>
 	</div>
 
 
 
-	<%= f.button 'Send Unlock Instructions', class: 'btn bgm-secondary btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
+	<%= f.button 'Send Unlock Instructions', class: 'btn bgm-green btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
 	<% end %>
 
 	<%= render partial: 'users/shared/links' %>

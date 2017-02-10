@@ -35,7 +35,7 @@ module TenantedAccess
       Account.current_protocol = protocol
     else
       # We do not know where the request was intended for - redirect to safe URI
-      redirect_to "http://www.paranet.com"
+      redirect_to(ENV['GIZMO_REDIRECT_URL'] || "http://www.paranet.com")
     end
 
 

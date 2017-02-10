@@ -1,13 +1,13 @@
 <style>
     .s-profile > a {
-        background: url(<%= image_url("profile-menu.png") %>) left top no-repeat;
+        background-image: url(<%= image_path("bkgds/mb-bg-fb-08.png") %>);
     }
 
 </style>
 
 <aside id="sidebar" class="sidebar c-overflow">
     <div class="s-profile">
-        <a href="" data-ma-action="profile-menu-toggle">
+        <a href="" style="cursor: default;">
             <div class="sp-pic">
                 <%= image_tag "demo/profile-pics/1.jpg" %>
             </div>
@@ -15,15 +15,15 @@
             <div class="sp-info">
                 <%= current_user.full_name %>
 
-                <i class="zmdi zmdi-caret-down"></i>
+                <!-- <i class="zmdi zmdi-caret-down"></i> -->
             </div>
         </a>
 
-        <ul class="main-menu">
+        <ul class="main-menu" style="display: block">
             <li>
                 <a href="profile-about.html">
                     <i class="zmdi zmdi-account"></i>
-                    View Profile</a>
+                    Profile</a>
             </li>
             <li>
                 <%= link_to '<i class="zmdi zmdi-time-restore"></i> Sign Out'.html_safe, destroy_user_session_path, method: :delete %>
@@ -32,76 +32,28 @@
     </div>
 
     <ul class="main-menu">
-        <li>
-            <a href="#">
-                <i class="zmdi zmdi-chart"></i>
-                Dashboard</a>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-assignment-check"></i>
-                Match</a>
+      <%# if current_user.is_ready_to_start? %>
+    <li>
+      <%= link_to('<i class="zmdi zmdi-chart"></i> Dashboard'.html_safe, root_path) %>
+    </li>
+    <% if current_user.is_owner? %>
+    <li class="sub-menu">
+        <a href="" data-ma-action="submenu-toggle">
+            <i class="zmdi zmdi-assignment-check"></i>
+            Access</a>
 
-            <ul>
-                <li>
-                    <a href="#">Analytics</a>
-                </li>
-                <li>
-                    <a href="#">Batch Process</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-attachment-alt"></i>
-                Append</a>
+        <ul>
+            <li>
+                <a href="#">Accounts</a>
+            </li>
+            <li>
+                <a href="#">Users</a>
+            </li>
+        </ul>
+    </li>
+    <% end %>
 
-            <ul>
-                <li>
-                    <a href="#">Profile with Linkage</a>
-                </li>
-                <li>
-                    <a href="#">Plus Executives</a>
-                </li>
-                <li>
-                    <a href="#">Corporate Linkage</a>
-                </li>
-                <li>
-                    <a href="#">Minority Linkage</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-search"></i>
-                Search</a>
-
-            <ul>
-                <li>
-                    <a href="#">Typeahead</a>
-                </li>
-                <li>
-                    <a href="#">Criteria</a>
-                </li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="" data-ma-action="submenu-toggle">
-                <i class="zmdi zmdi-portable-wifi"></i>
-                Monitoring</a>
-
-            <ul>
-                <li>
-                    <a href="#">Registration</a>
-                </li>
-                <li>
-                    <a href="#">Seed File</a>
-                </li>
-                <li>
-                    <a href="#">Notifications</a>
-                </li>
-            </ul>
-        </li>
+    <%# end %>
 
     </ul>
 </aside>

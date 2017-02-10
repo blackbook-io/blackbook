@@ -1,24 +1,23 @@
-<div class="lcb-header bgm-secondary p-20" style="height: 180px; border-radius: 2px 2px 0 0">
-</div>
 <div class="lcb-body">
 	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 	<%= devise_error_messages! %>
 	<div class="form-group">
 		<div class="fg-line">
 			<%= f.label "Email Address", class: "control-label email" %>
-			<%#= f.text_field :email, autofocus: true, class: "form-control input-lg", placeholder: "e.g. peter.pan@neverland.com" %>
-			<input type="email" class="form-control input-lg" required placeholder="e.g. peter.pan@neverland.com" id="admin_email" name="admin[email]">
+			<%= f.text_field :email, autofocus: true, class: "form-control input-lg", placeholder: "e.g. peter.pan@neverland.com" %>
+			<!-- <input type="email" class="form-control input-lg" required placeholder="e.g. peter.pan@neverland.com" id="admin_email" name="admin[email]"> -->
 		</div>
 	</div>
 
 	<div class="form-group">
 		<div class="fg-line">
 			<%= f.label "Password", class: "control-label" %>
-			<input type="password" class="form-control input-lg" placeholder="your secret password" id="admin_password" name="admin[password]">
+			<%= f.password_field :password, class: "form-control input-lg", placeholder: "your secret password" %>
+			<!-- <input type="password" class="form-control input-lg" placeholder="your secret password" id="admin_password" name="admin[password]"> -->
 		</div>
 	</div>
 
-	<%= f.button'Sign In', class: 'btn bgm-primary btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
+	<%= f.button'Sign In', class: 'btn bgm-green btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
 	<% end %>
 
 	<%= render partial: 'admins/shared/links' %>

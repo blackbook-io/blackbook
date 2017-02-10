@@ -1,5 +1,4 @@
 class GetStartedController < TenantedController
-  layout 'entry'
 
   # Displays the getting started page for a user with basic
   # user privilieges (ie not an owner)

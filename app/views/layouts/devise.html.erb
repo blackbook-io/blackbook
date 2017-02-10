@@ -21,12 +21,14 @@
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-
         <style>
             .turbolinks-progress-bar {
                 background: #6d5cae;
             }
 
+            .login-content {
+                background-image: url(<%= asset_url("bkgds/workbench.jpg") %>);
+            }
         </style>
 
     </head>
@@ -34,12 +36,23 @@
         <div class="login-content">
             <!-- Login -->
             <div class="lc-block toggled" id="l-login">
+
                 <div class="lcb-form">
+
+                    <div class="lcb-header" style="padding: 50px 20px 10px 20px;">
+                        <%= image_tag 'logos/login.png', width: 200 %>
+                    </div>
+
                     <%= yield %>
+
+                    <div class="lcb-footer" style="padding: 0 20px 20px 20px;">
+                        <%= image_tag 'logos/powered_by.png', width: 100 %>
+                    </div>
                 </div>
 
             </div>
         </div>
+
 
     </body>
 </html>

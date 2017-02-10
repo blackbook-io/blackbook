@@ -37,20 +37,24 @@
 }
 
 .s-profile {
+  border-bottom: 1px solid #eee;
+
     & > a {
         display: block;
         height: 129px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         width: 100%;
-        background: url(../img/profile-menu.png) no-repeat left top;
-        background-size: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
 
         .sp-pic {
-            padding: 12px;
+            padding: 12px 20px;
 
             & > img {
-                width: 47px;
-                height: 47px;
+                width: 45px;
+                height: 45px;
                 border-radius: 50%;
                 border: 3px solid rgba(0, 0, 0, 0.14);
                 box-sizing: content-box;
@@ -94,7 +98,7 @@
 .main-menu {
     list-style: none;
     padding-left: 0;
-    margin: 20px 0 0 0;
+    margin: 0;
 
     a {
         .transition(color);

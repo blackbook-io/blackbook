@@ -5,11 +5,32 @@
     margin-bottom: @grid-gutter-width;
     border-radius: 2px;
 
+    @media (max-width: (@screen-xs)) {
+        margin-bottom: 0;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 1px solid #eee;
+    }
+
     .card-header {
         position: relative;
         display: block;
         padding: 26px 30px;
         border-radius: 2px 2px 0 0;
+
+        h1 {
+            margin: 0;
+            line-height: 100%;
+            font-size: 20px;
+            font-weight: 500;
+
+            small {
+                display: block;
+                margin-top: 8px;
+                color: #AEAEAE;
+                line-height: 160%;
+            }
+        }
 
         h2 {
             margin: 0;
@@ -43,11 +64,11 @@
             bottom: -23px;
             z-index: 1;
         }
-        
+
         &[class*="bgm-"] {
             h2 {
                 color: #fff;
-                
+
                 small {
                     color: rgba(255,255,255,0.7);
                 }

@@ -1,5 +1,3 @@
-<div class="lcb-header bgm-primary p-20" style="height: 180px; border-radius: 2px 2px 0 0">
-</div>
 <div class="lcb-body">
 	<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 	<%= devise_error_messages! %>
@@ -11,9 +9,7 @@
 		</div>
 	</div>
 
-
-
-	<%= f.button 'Send Reset Instructions', class: 'btn bgm-secondary btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
+	<%= f.button 'Resend Confirmation Details', class: 'btn bgm-green btn-lg m-b-20 p-r-30 p-l-30 waves-effect', style: 'width: 100%' %>
 	<% end %>
 
 	<%= render partial: 'users/shared/links' %>

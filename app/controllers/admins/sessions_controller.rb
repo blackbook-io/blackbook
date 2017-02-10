@@ -2,7 +2,7 @@ class Admins::SessionsController < Devise::SessionsController
 
   layout 'devise_admins'
 
-  include AdminAccess
+  include AppAccess
 
 
   def after_sign_in_path_for(resource)

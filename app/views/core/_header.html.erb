@@ -1,5 +1,5 @@
 <!-- START HEADER -->
-<header id="header" class="clearfix" data-ma-theme="green">
+<header id="header" class="clearfix" data-ma-theme="primary">
     <ul class="h-inner">
         <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
             <div class="line-wrap">
@@ -10,10 +10,11 @@
         </li>
 
         <li class="hi-logo hidden-xs">
-            <a href="index.html">Gizmo</a>
+            <%= image_tag 'logos/header.png' %>
         </li>
 
         <li class="pull-right">
+          <% if current_user.is_ready_to_start? %>
             <ul class="hi-menu">
 
                 <!-- <li data-ma-action="search-open">
@@ -35,7 +36,7 @@
                             <div class="lg-body">
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/1.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/1.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">David Belle</div>
@@ -44,7 +45,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/2.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/2.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Jonathan Morris</div>
@@ -53,7 +54,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/3.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/3.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Fredric Mitchell Jr.</div>
@@ -62,7 +63,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/4.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/4.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Glenn Jecobs</div>
@@ -71,7 +72,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/4.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/5.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Bill Phillips</div>
@@ -104,7 +105,7 @@
                             <div class="lg-body">
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/1.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/1.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">David Belle</div>
@@ -113,7 +114,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/2.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/2.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Jonathan Morris</div>
@@ -122,7 +123,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/3.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/3.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Fredric Mitchell Jr.</div>
@@ -131,7 +132,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/4.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/4.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Glenn Jecobs</div>
@@ -140,7 +141,7 @@
                                 </a>
                                 <a class="list-group-item media" href="">
                                     <div class="pull-left">
-                                        <img class="lgi-img" src="img/demo/profile-pics/4.jpg" alt="">
+                                        <%= image_tag 'demo/profile-pics/5.jpg', class: 'lgi-img' %>
                                     </div>
                                     <div class="media-body">
                                         <div class="lgi-heading">Bill Phillips</div>
@@ -218,6 +219,7 @@
 
 
             </ul>
+          <% end %>
         </li>
     </ul>
 

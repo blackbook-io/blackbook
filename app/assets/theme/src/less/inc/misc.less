@@ -208,7 +208,7 @@
 html {
     &:not(.ismobile) {
         .page-loader {
-            background: #fff;
+            background: rgba(0,0,0,0.4);
             position: fixed;
             width: 100%;
             height: 100%;
@@ -235,7 +235,7 @@ html {
             }
         }
     }
-    
+
     &.ismobile .page-loader {
         display: none;
     }
@@ -318,6 +318,7 @@ html {
     top: 0;
     z-index: 9;
     cursor: pointer;
+    background: rgba(0,0,0,0.2);
 }
 
 

@@ -1,5 +1,5 @@
 class DashboardController < TenantedController
-  layout 'entry'
+  
   before_action :present_getting_started
 
   def index
