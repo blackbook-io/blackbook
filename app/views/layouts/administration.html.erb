@@ -3,6 +3,8 @@
     <head>
         <title><%= ENV['GIZMO_SITE_TITLE'] %></title>
         <%= csrf_meta_tags %>
+        <%= action_cable_meta_tag %>
+
         <link rel="shortcut icon" href="/favicon.png" type="image/png">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,6 +22,8 @@
         </section>
 
         <%= render partial: 'admins/core/footer' %>
+
+        <%= render partial: 'core/flash' %>
 
     </body>
 

@@ -1,0 +1,11 @@
+<script type="text/javascript">
+<% flash.each do |type, content| %>
+    <% if content.respond_to?('each') %>
+        <% content.each do |item| %>
+        $.notify("<%= item %>", "<%= resolve_flash_type(type) %>");
+        <% end %>
+    <% else %>
+        $.notify("<%= content %>", "<%= resolve_flash_type(type) %>");
+    <% end %>
+<% end %>
+</script>
