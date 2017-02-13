@@ -17,6 +17,8 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
+gem 'coffee-rails', '~> 4.2'
+
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 gem 'uuidtools'
@@ -32,6 +34,7 @@ gem 'logstash-event'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'turbolinks-redirect'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'

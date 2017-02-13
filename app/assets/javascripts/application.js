@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require turbolinks.redirect
 //
 //= require dist/vendors/bower_components/bootstrap/dist/js/bootstrap.min
 //= require dist/vendors/bower_components/flot/jquery.flot

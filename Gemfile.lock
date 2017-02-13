@@ -57,6 +57,13 @@ GEM
     carrierwave-aws (1.0.2)
       aws-sdk (~> 2.0)
       carrierwave (>= 0.7, < 2.0)
+    coffee-rails (4.2.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.2.x)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     colored (1.2)
     concurrent-ruby (1.0.4)
     countries (2.0.6)
@@ -189,6 +196,10 @@ GEM
     thread_safe (0.3.5)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
+    turbolinks-redirect (0.0.1)
+      jquery-rails
+      railties
+      turbolinks
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -213,6 +224,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   carrierwave-aws
+  coffee-rails (~> 4.2)
   colored
   country_select
   devise
@@ -230,6 +242,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   therubyracer
   turbolinks (~> 5)
+  turbolinks-redirect
   tzinfo-data
   uglifier
   uuidtools
