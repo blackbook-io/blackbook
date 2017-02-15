@@ -1,12 +1,16 @@
 <style>
+#header {
+  box-shadow: none !important;
+}
 .profile-view .pv-header {
-    background-image: url(<%= image_url("headers/sm/4.png") %>);
+  background-color: #03A9F4;
+    /*background-image: url(<%= image_url("headers/sm/4.png") %>);*/
   }
 
 </style>
 
 <div class="container">
-    <div class="block-header">
+    <div class="block-header hidden-xs">
         <h2><%= @administrator.full_name %>
             <small>Web/UI Developer, Edinburgh, Scotland</small>
         </h2>
@@ -36,7 +40,7 @@
       <div class="col-md-4">
         <div class="card profile-view">
                             <div class="pv-header">
-                              <%= image_tag "demo/profile-pics/profile-pic.jpg", class: "pv-main" %>
+                              <%= image_tag "demo/profile-pics/1.jpg", class: "pv-main" %>
                             </div>
 
                             <div class="pv-body">

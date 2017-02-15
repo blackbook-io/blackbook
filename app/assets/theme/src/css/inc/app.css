@@ -13811,6 +13811,17 @@ html.ismobile .page-loader {
     background: #E91E63;
   }
 }
+[data-ma-theme="red"] {
+  background-color: #F44336;
+}
+[data-ma-theme="red"] .ss-icon {
+  color: #F44336;
+}
+@media (max-width: 767px) {
+  [data-ma-theme="red"] .ha-menu {
+    background: #F44336;
+  }
+}
 [data-ma-theme="deeppurple"] {
   background-color: #673AB7;
 }

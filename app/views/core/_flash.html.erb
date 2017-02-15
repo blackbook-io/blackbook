@@ -5,7 +5,9 @@
         $.notify("<%= item %>", "<%= resolve_flash_type(type) %>");
         <% end %>
     <% else %>
+      <% unless content == true %>
         $.notify("<%= content %>", "<%= resolve_flash_type(type) %>");
+      <% end %>
     <% end %>
 <% end %>
 </script>
